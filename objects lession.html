@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <script>
+      const object = {
+        message: 'Hello World',
+      };
+      const object2 = object;
+      object.message = 'Hello World';
+
+      console.log(object.message);
+      console.log(object2.message);
+
+      const object3 = {
+        message: 'Hello World',
+      };
+      console.log(object2 === object);
+      console.log(object3 === object2);
+
+      const object4 = {
+        message: 'Going Well',
+        price: 800,
+      };
+
+      //const message = object4.message;
+      const {message, price} = object4;
+      console.log(object4);
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        message,
+        price,
+
+        /*discount: function functionname(){
+          console.log('Discount:200');
+        }*/
+        discount () {
+          console.log('Discount:200');
+        }
+      };
+      console.log(object5);
+      object5.discount();
+    </script>
+    
+  </body>
+</html>
