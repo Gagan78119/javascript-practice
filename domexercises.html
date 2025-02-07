@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise</title>
+</head>
+
+<body>
+    <button>9A</button>
+    <button class="b-change">9B</button>
+
+    <input placeholder="Enter your name" class="js-name-input" onkeydown="enterinput(event)">
+    <button onclick="submitname()">submit</button>
+    <p class="display-name"></p>
+
+    <input placeholder="type anything" class="type-anything" onkeyup="const inputElement = document.querySelector('.type-anything'); 
+    document.querySelector('.display-anything').innerHTML = inputElement.value;">
+    <p class="display-anything"></p>
+
+    <script>
+
+        function enterinput(event) {
+            if (event.key === 'Enter') { 
+                submitname(); 
+            }
+        }
+
+        function submitname() {
+            const inptbx = document.querySelector('.js-name-input');
+            document.querySelector('.display-name').innerHTML = `Your name is: ${inptbx.value}`;
+        }
+
+
+        const btn = document.querySelector('button');
+        console.log(btn);
+        document.querySelector('.b-change').innerHTML = '9b done!';
+    </script>
+</body>
+
+</html>

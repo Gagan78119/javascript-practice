@@ -9,8 +9,13 @@
 
 <body>
 
-    <button onclick="playGame('heads')">heads</button>
-    <button onclick="playGame('tails')">tails</button>
+    <button onclick="playGame('heads');
+    document.querySelector('.js-choice').innerHTML = 'You chose: heads'; ">heads</button>
+    <button onclick="playGame('tails')
+    document.querySelector('.js-choice').innerHTML = 'You chose: tails';
+    ">tails</button>
+
+    <p class="js-choice"></p>
 
             <script>
 
@@ -20,7 +25,7 @@
                 };
                 function playGame(guess) {
                     const randomNumber = Math.random();
-                    const result = randomNumber < 0.5 ? 'heads' : 'tails';
+                    let result = randomNumber < 0.5 ? 'heads' : 'tails';
 
                     console.log(guess === result ? 'You win!' : 'You lose!');
 
