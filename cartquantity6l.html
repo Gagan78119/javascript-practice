@@ -2,6 +2,16 @@
 <html>
   <head>
     <title>Cart Quantity</title>
+    <style>
+      .add-cart{
+        background-color: rgb(255, 216, 20);
+        color: black;
+        padding: 5px 20px;
+        border: none;
+        border-radius: 50px;
+      }
+
+    </style>
   </head>
   <body>
     <button onclick="
@@ -10,7 +20,7 @@
 
     <button onclick="
       updateCartQuantity(1);
-    ">Add to Cart</button>
+    " class="add-cart">Add to Cart</button>
 
     <button onclick="
       updateCartQuantity(2);
